@@ -25,7 +25,8 @@ $(function () {
                 tel: $("#tel").val(),
             },
             success: function (data) {
-                console.log(data);
+                console.log(data[0]);
+                console.log(data[1]);
             },
             error: function (status, error) {
                 console.log(status);
