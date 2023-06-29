@@ -7,7 +7,7 @@ $(function () {
                 id: $("#id").text(),
             },
             success: function (data, session) {
-                alert(session);
+                alert(data, session);
             },
         });
     });
