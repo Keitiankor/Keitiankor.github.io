@@ -24,7 +24,15 @@ $(function () {
                 name: $("#name").val(),
                 tel: $("#tel").val(),
             },
-            success: function () {},
+            success: function (data) {
+                if (data == 201) {
+                    alert("회원가입 성공.");
+                    location.href = "member";
+                }
+                if (data == 409) {
+                    alert("중복된 아이디입니다.");
+                }
+            },
         });
     });
 
