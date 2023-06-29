@@ -30,7 +30,7 @@ $(function () {
                     tel: $("#tel").val(),
                 },
                 success: function (data) {
-                    if (data == 201) {
+                    if (data == 200) {
                         alert("회원가입 성공.");
                         location.href = "member";
                     }
