@@ -32,7 +32,7 @@ $(function () {
                 success: function (data) {
                     if (data == 200) {
                         alert("회원가입 성공.");
-                        location.href = "member";
+                        location.reload();
                     }
                     if (data == 409) {
                         alert("중복된 아이디입니다.");
@@ -49,8 +49,10 @@ $(function () {
             url: "logout",
             type: "POST",
             success: function (data) {
-                console.log(data);
-                location.href = "login";
+                if (data == 200) {
+                    alert("로그아웃 성공.");
+                    location.reload();
+                }
             },
         });
     });
