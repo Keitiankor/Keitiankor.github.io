@@ -15,7 +15,7 @@ $(function () {
     });
 
     $("#register").on("click", function () {
-        if ($("#idr").val() != null && $("#pwr").val() != null) {
+        if ($("#idr").val() != "" && $("#pwr").val() != "") {
             $.ajax({
                 url: "register",
                 type: "POST",
