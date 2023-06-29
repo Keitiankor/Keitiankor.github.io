@@ -6,7 +6,6 @@ $(function () {
             data: {
                 title: $("#title").val(),
                 content: $("#content").val(),
-                writer: sessionStorage.getItem("id"),
             },
             success: function () {
                 location.href = "bbs";
