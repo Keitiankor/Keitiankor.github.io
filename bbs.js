@@ -9,3 +9,9 @@ function next() {
     let nextpage = Number(page) + 1;
     location.href = "bbs?p=" + nextpage;
 }
+
+$(function () {
+    $("#submit").on("click", function () {
+        location.href = "posting";
+    });
+});
