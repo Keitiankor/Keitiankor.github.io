@@ -12,7 +12,7 @@ $(function () {
             url: "deletepost",
             type: "POST",
             data: {
-                id: sessionStorage.getItem("id"),
+                id: $("#id").val(),
             },
             success: function () {
                 location.href = "bbs";
