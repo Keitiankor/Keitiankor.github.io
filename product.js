@@ -16,8 +16,7 @@ function before() {
 function next() {
     let page = new URL(location.href).searchParams.get("offset");
     let nextpage = Number(page);
-    nextpage = nextpage + 1;
-    console.log(nextpage);
+    console.log(page);
     $.ajax({
         url: "product",
         type: "GET",
