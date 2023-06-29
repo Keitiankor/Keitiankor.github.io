@@ -1,6 +1,6 @@
 function before() {
     $.ajax({
-        url: product,
+        url: "product",
         type: "GET",
         data: {
             limit: "10",
@@ -11,7 +11,7 @@ function before() {
 
 function next() {
     $.ajax({
-        url: product,
+        url: "product",
         type: "GET",
         data: {
             limit: "10",
