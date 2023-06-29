@@ -1,8 +1,6 @@
 function before() {
     let page = new URL(location.href).searchParams.get("p");
-    let beforepage = Number(page);
-    beforepage = beforepage - 1;
-    console.log(beforepage);
+    let beforepage = Number(page) - 1;
     $.ajax({
         url: "product",
         type: "GET",
@@ -15,8 +13,7 @@ function before() {
 
 function next() {
     let page = new URL(location.href).searchParams.get("p");
-    let nextpage = Number(page);
-    console.log(page);
+    let nextpage = Number(page) + 1;
     $.ajax({
         url: "product",
         type: "GET",
