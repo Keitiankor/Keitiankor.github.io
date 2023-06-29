@@ -8,7 +8,7 @@ $(function () {
             data: {
                 id: $("#id").text(),
                 title: $("#title").val(),
-                content: content.replace(/(?:\r\n|\r|\n)/g, "<br>"),
+                content: content.replace(13, "<br>"),
             },
             success: function () {
                 location.href = "post?id=" + $("#id").text();
