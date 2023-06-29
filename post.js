@@ -32,6 +32,9 @@ $(function () {
                 id: $("#id").text(),
                 content: $("#reply").val(),
             },
+            success: function () {
+                location.reload();
+            },
         });
     });
 });
