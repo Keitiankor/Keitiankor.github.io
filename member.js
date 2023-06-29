@@ -15,25 +15,27 @@ $(function () {
     });
 
     $("#register").on("click", function () {
-        $.ajax({
-            url: "register",
-            type: "POST",
-            data: {
-                id: $("#idr").val(),
-                pw: $("#pwr").val(),
-                name: $("#name").val(),
-                tel: $("#tel").val(),
-            },
-            success: function (data) {
-                if (data == 201) {
-                    alert("회원가입 성공.");
-                    location.href = "member";
-                }
-                if (data == 409) {
-                    alert("중복된 아이디입니다.");
-                }
-            },
-        });
+        if ($("#idr").val() != null && $("#pwr").val() != null) {
+            $.ajax({
+                url: "register",
+                type: "POST",
+                data: {
+                    id: $("#idr").val(),
+                    pw: $("#pwr").val(),
+                    name: $("#name").val(),
+                    tel: $("#tel").val(),
+                },
+                success: function (data) {
+                    if (data == 201) {
+                        alert("회원가입 성공.");
+                        location.href = "member";
+                    }
+                    if (data == 409) {
+                        alert("중복된 아이디입니다.");
+                    }
+                },
+            });
+        }
     });
 
     $("#logout").on("click", function () {
