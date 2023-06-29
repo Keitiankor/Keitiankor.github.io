@@ -6,9 +6,8 @@ $(function () {
             data: {
                 id: $("#id").text(),
             },
-            success: function () {
-                let item = sessionStorage.getItem("basket");
-                alert(item);
+            success: function (data, session) {
+                alert(session);
             },
         });
     });
