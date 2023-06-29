@@ -9,11 +9,8 @@ $(function () {
 
     $("#delete").on("click", function () {
         $.ajax({
-            url: "deletepost",
+            url: "deletepost?id='#id'",
             type: "POST",
-            data: {
-                id: $("#id").val(),
-            },
             success: function () {
                 location.href = "bbs";
             },
