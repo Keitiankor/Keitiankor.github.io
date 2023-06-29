@@ -8,7 +8,12 @@ $(function () {
                 pw: $("#pw").val(),
             },
             success: function (data) {
-                console.log(data);
+                if (data == 200) {
+                    alert("로그인 성공.");
+                }
+                if (data == 401) {
+                    alert("아이디 또는 비밀번호가 일치하지 않습니다.");
+                }
             },
         });
     });
