@@ -1,5 +1,5 @@
 function before() {
-    let page = new URL(location.href).searchParams.get("offset");
+    let page = new URL(location.href).searchParams.get("p");
     let beforepage = Number(page);
     beforepage = beforepage - 1;
     console.log(beforepage);
@@ -14,7 +14,7 @@ function before() {
 }
 
 function next() {
-    let page = new URL(location.href).searchParams.get("offset");
+    let page = new URL(location.href).searchParams.get("p");
     let nextpage = Number(page);
     console.log(page);
     $.ajax({
