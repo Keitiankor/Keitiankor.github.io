@@ -1,6 +1,7 @@
 function before() {
     let page = new URL(location.href).searchParams.get("offset");
-    let beforepage = Number(page) + 1;
+    let beforepage = Number(page);
+    beforepage = beforepage - 1;
     console.log(beforepage);
     $.ajax({
         url: "product",
@@ -14,7 +15,8 @@ function before() {
 
 function next() {
     let page = new URL(location.href).searchParams.get("offset");
-    let nextpage = Number(page) + 1;
+    let nextpage = Number(page);
+    nextpage = nextpage + 1;
     console.log(nextpage);
     $.ajax({
         url: "product",
