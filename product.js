@@ -3,8 +3,8 @@ function before() {
         url: product,
         type: "GET",
         data: {
-            limits: "10",
-            offsets: URLSearchParams.get("offset"),
+            limit: "10",
+            p: URLSearchParams.get("offset") - 1,
         },
     });
 }
