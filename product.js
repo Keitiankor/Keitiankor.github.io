@@ -4,7 +4,7 @@ function before() {
         type: "GET",
         data: {
             limit: "10",
-            p: URLSearchParams.get("offset") - 1,
+            p: new URL(location.href).searchParams.get("offset") - 1,
         },
     });
 }
@@ -15,7 +15,7 @@ function next() {
         type: "GET",
         data: {
             limit: "10",
-            p: URLSearchParams.get("offset") - 1,
+            p: new URL(location.href).searchParams.get("offset") + 1,
         },
     });
 }
