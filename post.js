@@ -15,8 +15,11 @@ $(function () {
                 id: $("#id").text(),
                 writer: $("#writer").text(),
             },
-            success: function () {
-                location.href = "bbs";
+            success: function (data) {
+                if (data > 0) {
+                    alert("삭제되었습니다.");
+                    location.href = "bbs";
+                }
             },
         });
     });
