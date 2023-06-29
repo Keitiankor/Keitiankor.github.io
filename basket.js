@@ -6,8 +6,8 @@ $(function () {
             data: {
                 id: $("#id").text(),
             },
-            success: function (data, session) {
-                alert(data, session);
+            success: function () {
+                location.reload();
             },
         });
     });
