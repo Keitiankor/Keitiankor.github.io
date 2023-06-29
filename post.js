@@ -23,4 +23,15 @@ $(function () {
             },
         });
     });
+
+    $("#comment").on("click", function () {
+        $.ajax({
+            url: "comment",
+            type: "POST",
+            data: {
+                id: $("#id").text(),
+                content: $("#reply").val(),
+            },
+        });
+    });
 });
