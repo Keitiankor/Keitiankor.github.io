@@ -1,7 +1,7 @@
 $(function () {
     $("#edit").on("click", function () {
         $.ajax({
-            url: "posting",
+            url: "editpost",
             type: "POST",
             data: {
                 id: $("#id").text(),
