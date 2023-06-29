@@ -4,7 +4,7 @@ $(function () {
     });
 
     $("#edit").on("click", function () {
-        location.href = "editpost?id='#id'";
+        location.href = "editpost";
     });
 
     $("#delete").on("click", function () {
@@ -12,8 +12,8 @@ $(function () {
             url: "deletepost",
             type: "POST",
             data: {
-                id: $("#id").val(),
-                writer: $("#writer").val(),
+                id: $("#id").text(),
+                writer: $("#writer").text(),
             },
             success: function () {
                 location.href = "bbs";
