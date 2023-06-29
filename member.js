@@ -9,7 +9,6 @@ $(function () {
             },
             success: function (data) {
                 console.log(data);
-                location.href = "login";
             },
         });
     });
